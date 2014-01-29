@@ -62,37 +62,40 @@
 
 http://157.123.23.44/index.htm</p>
 
-<p>Why the series of numbers?  Each computer on this network was assigned an address, called an Internet Protocol Address, or IP Address.  This was assigned through a lower-level protocol called Transmission Control Protocol / Internet Protocol, or rather, TCP/IP.  It was the foundational technology that allowed requests to be routed to the appropriate server that contained a given resource, or rather, web page.  However, because the IP address for a computer would change occasionally for a given computer or institution, they devised a system called the Domain Name System, or rather, the DNS, to turn a friendly name like:
-
+<p>Why the series of numbers?  Each computer on this network was assigned an address, called an Internet Protocol Address, or IP Address.  This was assigned through a lower-level protocol called Transmission Control Protocol / Internet Protocol, or rather, TCP/IP.  It was the foundational technology that allowed requests to be routed to the appropriate server that contained a given resource, or rather, web page.  However, because the IP address for a computer would change occasionally for a given computer or institution, they devised a system called the Domain Name System, or rather, the DNS, to turn a friendly name like:<br>
+<br>
 mit.edu
-
-... into the actual "location", like:
-
+<br><br>
+... into the actual "location", like:<br>
+<br>
 18.72.0.3</p>
 
 <p>A system of top-level Domain Names was created ... .edu for educational institutions, .mil for Military, .gov for Government, .net for Network related resources, .org for Non-profit organizations, .com for Commercial organizations, etc.  Later, other countries and a plethora of top-level domains were added and others for commercial and other interests.</p>
 
 <p>The web browser will query databases of domain names and their associated IP Addresses and will translate the requests automatically for the user without his or her knowledge.  Typically, each Internet Service Provider has a Domain Name System server that can be queried for resolving Domain Names into IP Addresses.  The databases that contain this Domain Name information stay synchronized around the globe, although sometimes the synchronization process can take minutes or hours to complete.</p>
 
-The Purpose for Standards Groups
+<h3>The Purpose for Standards Groups</h3>
 
 <p>At every step of the way, one or more organizations were formed to help identify standards for these technologies comprised of experts and luminaries who were pushing these technologies forward.  They would meet both virtually and in person to define and discuss the merits of adding new features to a given standard and would encourage organizations who were creating hardware and software to follow these standards so that products from different vendors could work together seamlessly.  Perhaps one of the most influential and important standards body you will hear about is the W3C, or rather, the World Wide Web Consortium.  They were one of the groups responsible for the latest version of HTML, version 5.  Another is the WHATWG, or rather, the Web Hypertext Application Technology Working Group, which is comprised of a subset of the W3C and several additional experts and organizations that have a  vested interest in the vitality of the World Wide Web.  The background of HTML5, the previous versions of HTML, as well as the standards organizations involved is fascinating because you get a peek into both the process and the politics of these organizations.</p>
 
-Recap of the World Wide Web Technical Overview
+<h2>Recap of the World Wide Web Technical Overview</h2>
 
 <p>From a purely technical perspective, you should now understand a few things:</p>
 
-First of all, hopefully you now have an answer to the question everyone first starting out asks: "why the heck did they make URLs so convoluted?  Wouldn't it be easier to just type in 'microsoft' instead of 'http://www.microsoft.com'?"  There's an evolution of technologies, and furthermore, it was never intended for use by the masses.  At some point commercialized and individual access to the internet dwarfed the intended use, however the technologies created 30 years ago are still in play.
+<ol>
+<li>First of all, hopefully you now have an answer to the question everyone first starting out asks: "why the heck did they make URLs so convoluted?  Wouldn't it be easier to just type in 'microsoft' instead of 'http://www.microsoft.com'?"  There's an evolution of technologies, and furthermore, it was never intended for use by the masses.  At some point commercialized and individual access to the internet dwarfed the intended use, however the technologies created 30 years ago are still in play.</li>
 
-Second, hopefully you will begin see the purpose of things like http:// ... in which you are saying you want to access a specific channel of traffic, HTTP, or rather, World Wide Web traffic, as opposed to FTP (File Transfer Protocol) for working with large files, SMTP (Simple Mail Transfer Protocol) for sending email, and so on.
+<li>Second, hopefully you will begin see the purpose of things like http:// ... in which you are saying you want to access a specific channel of traffic, HTTP, or rather, World Wide Web traffic, as opposed to FTP (File Transfer Protocol) for working with large files, SMTP (Simple Mail Transfer Protocol) for sending email, and so on.</li>
 
-Third, hopefully you see the purpose of .com, .edu, .net and so on ... at least, you understand the original purpose, and you understand how those domain names are translated into the actual IP Addresses that are utilized by routers to move traffic around the internet to it's intended destination.
+<li>Third, hopefully you see the purpose of .com, .edu, .net and so on ... at least, you understand the original purpose, and you understand how those domain names are translated into the actual IP Addresses that are utilized by routers to move traffic around the internet to it's intended destination.</li>
 
-Fourth, hopefully you can see that the specifics of HTML - and all other standards - are decided on by a body of individuals who understand what is needed and propose and debate the merits of adding or removing parts of a given specification.  You should also see the purpose for these standards - so that organizations creating hardware and software to support the World Wide Web can achieve a high degree of interoperability.
+<li>Fourth, hopefully you can see that the specifics of HTML - and all other standards - are decided on by a body of individuals who understand what is needed and propose and debate the merits of adding or removing parts of a given specification.  You should also see the purpose for these standards - so that organizations creating hardware and software to support the World Wide Web can achieve a high degree of interoperability.</li>
 
-Fifth, hopefully you can see the role that each component plays in the exchange of documents and other resources ... the web browser is responsible for interacting with the end user who requests a document by typing in a web address or clicks on a hyperlink.  It also packages up that request and begins the process of requesting the document from it's host, the computer called the web server.  The message is packaged using the HTTP protocol, which you can think of as an electronic envelope geared towards stateless request / response style transmissions between two computers.  Routers are special devices that know how to interpret the address encoded in electronic envelopes, or rather, the HTTP messages, and route them closer to their ultimate destination.  A web server is merely a computer at a given web address that is listening for HTTP requests, and if the address is valid, returns the requested document or resource using the same HTTP message addressing as a response.
+<li>Fifth, hopefully you can see the role that each component plays in the exchange of documents and other resources ... the web browser is responsible for interacting with the end user who requests a document by typing in a web address or clicks on a hyperlink.  It also packages up that request and begins the process of requesting the document from it's host, the computer called the web server.  The message is packaged using the HTTP protocol, which you can think of as an electronic envelope geared towards stateless request / response style transmissions between two computers.  Routers are special devices that know how to interpret the address encoded in electronic envelopes, or rather, the HTTP messages, and route them closer to their ultimate destination.  A web server is merely a computer at a given web address that is listening for HTTP requests, and if the address is valid, returns the requested document or resource using the same HTTP message addressing as a response.</li>
+</ol>
 
-One Final Note About Our Overview
+
+<h2>One Final Note About Our Overview</h2>
 
 <p>Let me add that (a) I distilled this down and over-simplified it to keep it simple at a high level.  You could spend months or years learning more about any single component of what I just described in a few sentences, and (b) after 30 years of use and technological advancement, web development has gotten a LOT more sophisticated.  And most pertinent to this series of lessons, web development techniques and technologies have become much more sophisticated.  While most of the underpinnings are still in play, some of the technologies have been refined and expanded.</p>  
 
@@ -105,19 +108,22 @@ One Final Note About Our Overview
 
 <article>
 
-How Web Browsers Parse HTML
+<h1>How Web Browsers Parse HTML</h1>
 
 <p>One final topic I want to talk about that affects modern web development is the implementations of various web browsers.  As you'll recall, once the requested web page has been returned, it will be parsed by a web browser then displayed on screen.</p>
 
 There are four major parsing and rendering engines that are popular today.
 
-Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.
+<ul>
+  <li>Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.</li>
 
-KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.
+  <li>KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.</li>
 
-Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.
+  <li>Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.</li>
 
-Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.
+  <li>Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.</li>
+</ul>
+
 
 <p>They are *mostly* the same, in so much that a web page will look mostly the same regardless of which web browser it is loaded into.  However it is the differences between them that most people discuss because it provides design challenges.</p>
 
@@ -129,8 +135,9 @@ Characteristics of HTML5 Web Pages
 
 <p>Each web page should declare which standard it has promised to adhere to.  This is called a DOCTYPE, and it is the reason that we typed this:<br>
 <br>
-<!DOCTYPE html>
+&lt;!DOCTYPE html&gt;
 <br>
+
 <br>
 ... at the very top of our web page.  This instruction told any web browser that may open it that it should be evaluated as an HTML5 document, as opposed to an HTML document of another version.  Every instruction should adhere to the HTML5 specification (which we'll talk about in a moment).  If it doesn't, the renderer may not know how to properly apply the rules of HTML5 to the document and must drop back into something called "quirks mode" where the browser will take a best guess on how to best render the web page.  "Quirks mode" exists because there are plenty of poorly coded HTML page in the world and the web browser wants to try to the best of its ability to render something to the end user.  If web browsers through up their hands and complained each time a web developer wrote bad code, the World Wide Web experience would be dreadful.  Since writing HTML that doesn't validate against a standard can produce inconsistent results, web developers are strongly encouraged to take great care in the code they write.  In fact, most tools that allow you to write HTML pages incorporate a validator to ensure the code you write validates against your chosen HTML specification.  We'll use an HTML5 validator that's available on the internet for free in just a moment.</p>
 
