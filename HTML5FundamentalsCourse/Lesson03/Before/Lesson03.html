@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title>HTML5 and CSS3 Fundamentals</title>
+  <meta charset="utf-8">
+  <title>HTML5 and CSS3 Fundamentals</title>
 </head>
-
 <body>
 
 <header>
@@ -28,7 +27,7 @@
 
 <article>
 
-<h1>Background Every Web Developer Needs to Know</h1>
+<h1>Background Every Web Developer Needs to Know<h1>
 
 <h2>Introduction</h2>
 
@@ -51,21 +50,20 @@
 
 <figure>
   <img src="www-diagram.gif" alt="A diagram of route from the user request to the web server and back again">
-  <figcaption>Figure 2. (1) The HTTP Request is (2) routed across the internet to the (3) server which serves the (4) requested file back in the body of an HTTP Response message. (5) The HTTP Response is routed across the internet to the original requestor.  (6) The requested file is parsed and displayed in the user's web browser.</figcaption>
-</figure
+  <figcaption>Figure 2. (1) The HTTP Request is (2) routed across the internet to the (3) server which serves the (4) requested file back in the body of an HTTP Response message. (5) The HTTP Response is routed across the internet to the original requestor.  (6) The requested file is parsed and displayed in the user's web browser.
+</figcaption>
+</figure>
 
 <p>Once the requested document is delivered through the network back to requestor, that document is loaded into the web browser.  The browser parses through the HTML and decides how to render (or rather, display) its content and appearance on the computer screen.</p>
 
-<h3>What Are Domain Names?</h3>
+<h3>What Are Domain Names?</h3>  
 
-<p>The request that users type into web browsers originally looked something like this:
-
+<p>The request that users type into web browsers originally looked something like this:<br>
+<br>
 http://157.123.23.44/index.htm</p>
 
 <p>Why the series of numbers?  Each computer on this network was assigned an address, called an Internet Protocol Address, or IP Address.  This was assigned through a lower-level protocol called Transmission Control Protocol / Internet Protocol, or rather, TCP/IP.  It was the foundational technology that allowed requests to be routed to the appropriate server that contained a given resource, or rather, web page.  However, because the IP address for a computer would change occasionally for a given computer or institution, they devised a system called the Domain Name System, or rather, the DNS, to turn a friendly name like:<br>
-<br>
-mit.edu
-<br><br>
+<br>mit.edu<br><br>
 ... into the actual "location", like:<br>
 <br>
 18.72.0.3</p>
@@ -94,7 +92,6 @@ mit.edu
 <li>Fifth, hopefully you can see the role that each component plays in the exchange of documents and other resources ... the web browser is responsible for interacting with the end user who requests a document by typing in a web address or clicks on a hyperlink.  It also packages up that request and begins the process of requesting the document from it's host, the computer called the web server.  The message is packaged using the HTTP protocol, which you can think of as an electronic envelope geared towards stateless request / response style transmissions between two computers.  Routers are special devices that know how to interpret the address encoded in electronic envelopes, or rather, the HTTP messages, and route them closer to their ultimate destination.  A web server is merely a computer at a given web address that is listening for HTTP requests, and if the address is valid, returns the requested document or resource using the same HTTP message addressing as a response.</li>
 </ol>
 
-
 <h2>One Final Note About Our Overview</h2>
 
 <p>Let me add that (a) I distilled this down and over-simplified it to keep it simple at a high level.  You could spend months or years learning more about any single component of what I just described in a few sentences, and (b) after 30 years of use and technological advancement, web development has gotten a LOT more sophisticated.  And most pertinent to this series of lessons, web development techniques and technologies have become much more sophisticated.  While most of the underpinnings are still in play, some of the technologies have been refined and expanded.</p>  
@@ -102,42 +99,38 @@ mit.edu
 <p>Take HTML for example.  In early versions, HTML was called on to do "double-duty" ... it expressed both the structure of a document as well as its aesthetic layout.  In other words, the same syntax defined both the fact that there would be fie paragraphs separated by a series of headings indicating the relationship of those paragraphs to each other, AS WELL AS the font types, colors and sizes, the border around the web page, the rounded corners and other adornments to make the web page attractive.  While scientists and academicians may not be overly concerned about the aesthetics, at least not 30 years ago, now the World Wide Web is used for eCommerce, web applications that mimic desktop applications, gaming and more.</p>  
 
 <p>More recently, these two responsibilities - of structure and presentation - have been split in two ... HTML should define the structure of the document, and Cascading Style Sheets should control the presentation, or rather, the style or aesthetic qualities of a web page.  We'll see how this separation of responsibilities plays out throughout this course.</p>
-
 </article>
 
 
 <article>
-
 <h1>How Web Browsers Parse HTML</h1>
 
 <p>One final topic I want to talk about that affects modern web development is the implementations of various web browsers.  As you'll recall, once the requested web page has been returned, it will be parsed by a web browser then displayed on screen.</p>
 
-There are four major parsing and rendering engines that are popular today.
+<p>There are four major parsing and rendering engines that are popular today.</p>
 
 <ul>
-  <li>Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.</li>
+<li>Trident, the web browser engine from Internet Explorer, is used by many applications on the Microsoft Windows platform, such as netSmart, Outlook Express, some versions of Microsoft Outlook, and the mini-browsers in Winamp and RealPlayer.</li>
 
-  <li>KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.</li>
+<li>KDE's open-source KHTML engine is used in KDE's Konqueror web browser and was the basis for WebKit, the rendering engine in Apple's Safari and Google's Chrome web browsers.</li>
 
-  <li>Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.</li>
+<li>Gecko, the Mozilla project's open-source web browser engine, is used by a variety of products derived from the Mozilla code base, including the Firefox web browser, the Thunderbird e-mail client, and SeaMonkey internet suite.</li>
 
-  <li>Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.</li>
+<li>Opera Software's proprietary Presto engine is licensed to a number of other software vendors, and is used in Opera's own web browser.</li>
 </ul>
-
 
 <p>They are *mostly* the same, in so much that a web page will look mostly the same regardless of which web browser it is loaded into.  However it is the differences between them that most people discuss because it provides design challenges.</p>
 
-What do I mean when I use the terms "parse" and "render"?  
+<h2>What do I mean when I use the terms "parse" and "render"?</h2>
 
 <p>The term "parse" refers to the process of breaking apart the HTML document to better "understand" the instructions coded there in.  During this phase, other resources, like external CSS files or JavaScript files, or images, must be requested so that the browser can get a complete picture of the code it is responsible for ultimately rendering.  After all those external resources are downloaded and analyzed, they are typically loaded into the computer's memory as a tree, or hierarchy, of software objects then passed to the rendering engine component of the browser - more about that in a moment.  When I refer to these hierarchical software objects, I simply mean that some objects "own" or are parents to other objects ... a simple example might be that a paragraph is a parent to each sentence, which is a parent to each word.  There might be other tags and graphical elements that the paragraph owns as well.  This is simply part of the process of deciding what technique the browser will use to ultimately render the HTML to the screen.</p>
 
-Characteristics of HTML5 Web Pages
+<h2>Characteristics of HTML5 Web Pages</h2>
 
 <p>Each web page should declare which standard it has promised to adhere to.  This is called a DOCTYPE, and it is the reason that we typed this:<br>
 <br>
 &lt;!DOCTYPE html&gt;
 <br>
-
 <br>
 ... at the very top of our web page.  This instruction told any web browser that may open it that it should be evaluated as an HTML5 document, as opposed to an HTML document of another version.  Every instruction should adhere to the HTML5 specification (which we'll talk about in a moment).  If it doesn't, the renderer may not know how to properly apply the rules of HTML5 to the document and must drop back into something called "quirks mode" where the browser will take a best guess on how to best render the web page.  "Quirks mode" exists because there are plenty of poorly coded HTML page in the world and the web browser wants to try to the best of its ability to render something to the end user.  If web browsers through up their hands and complained each time a web developer wrote bad code, the World Wide Web experience would be dreadful.  Since writing HTML that doesn't validate against a standard can produce inconsistent results, web developers are strongly encouraged to take great care in the code they write.  In fact, most tools that allow you to write HTML pages incorporate a validator to ensure the code you write validates against your chosen HTML specification.  We'll use an HTML5 validator that's available on the internet for free in just a moment.</p>
 
@@ -157,7 +150,6 @@ Characteristics of HTML5 Web Pages
 
 <aside>If you have a captive audience, the experience is a little different.  For example, In Windows 8, HTML5 developers can rely on Internet Explorer 10's expanded HTML5 support to build user interfaces that run as Metro-style applications utilizing the WinRT API.  In this case, you know for a fact where your HTML5 will be rendered and by whom, and you are free to use the full set of HTML5 features IE10 supports without having to worry about other browser vendors and version.  Another example might be that someday you're building web-based intranet applications that will run inside of your enterprise on an Intranet.  In this case, your IT department may have standardized on a specific web browser.  If this is the case, you are free to use the HTML features supported by that specific vendor and version of web browser.</ais>
 
-
 <h2>Conclusion</h2>
 
 <p>Hopefully you can see the issues surrounding HTML5 and CSS3 with regards to their support by various versions and vendors of web browsers and two different thought processes on how to incorporate HTML5 into your own work.</p>
@@ -175,7 +167,6 @@ Characteristics of HTML5 Web Pages
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-
 
 </footer>
 </body>
